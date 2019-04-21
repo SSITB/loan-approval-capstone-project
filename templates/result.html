@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+     <title>My Lending Club</title>
+     <style>
+        body{
+            background:url(
+            https://leftcoastcliffsnotes.files.wordpress.com/2014/08/moneyshot3_resize.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            }
+     </style>
+     
+     <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  </head>
+  <body> 
+  
+    <div class="container"><br>
+      <center>
+        <h2>
+            <font size="14", style="color:tomato;">My Lending Club</font>
+        </h2>
+      </center>
+    </div>
+    
+      
+    <div class="d-flex justify-content-center">
+    <div class="col-md-4">
+    <div>
+      <br>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+        {% for message in messages %}
+            {% if "moment" not in message[1]: %}
+                <div class="alert alert-info">
+                <strong><center>Congratulations! <br></strong> {{ message[1] }}</center>
+                </div>
+            {% endif %}
+            {% if "moment" in message[1]: %}
+                <div class="alert alert-danger">
+                <strong><center>Sorry. <br></strong> {{ message[1] }}</center>
+                </div>
+            {% endif %}
+        {% endfor %}
+            {% endif %}
+        {% endwith %}
+       <br> 
+     </div>
+    
+    <center>
+        <button onclick="goBack()" type="submit" class="btn btn-success" style="background:tomato; border:tomato; height:50px; width:100px">
+            <font size = "4">Go Back</font>
+        </button>
+    </center>
+    
+    <script>
+        function goBack() {
+          window.history.back();
+        }
+    </script>
+    
+    <br>
+    <br>
+        
+    <div style="display: flex; justify-content: center;">
+           <img src="data:image/png;base64,{{ graph }}"></img>
+    </div>
+    
+    <div>
+        <br>
+    </div>
+    
+    <div>
+        <br>
+    </div>
+      
+    <div>
+        <br>
+    </div>
+      
+    <div>
+        <br>
+    </div>
+    
+  </body>
+</html>
