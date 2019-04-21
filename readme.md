@@ -1,4 +1,3 @@
-Galvanize Capstone Project 
 Machine Learning For Banking: Loan Approval Use Case
 =====================================================
 
