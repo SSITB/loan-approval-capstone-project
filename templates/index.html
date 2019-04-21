@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+     <title>My Lending Club</title>
+     <style>
+        body{
+            background:url(
+            https://leftcoastcliffsnotes.files.wordpress.com/2014/08/moneyshot3_resize.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            }
+     </style>
+     
+     <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  </head>
+  <body> 
+  
+    <div class="container"><br>
+      <center>
+        <h2>
+            <font size="14", style="color:tomato;">My Lending Club</font>
+        </h2>
+      </center>
+    </div>
+
+    <div class="container"><br>
+    <div class="d-flex justify-content-center">
+    <div class="col-md-4">
+      <form  action="" method="post" role="form">
+        {{ form.csrf }}
+        <div class="form-group">
+              <input type="number" class="form-control" id="loan-amount" name="loan-amount" placeholder="Loan Amount">
+              <br>
+              <br>
+              <input type="number" class="form-control" id="income" name="income" placeholder="Monthly Income">
+        	      <br>
+              <br>
+            	  <input type="number" class="form-control" id="debt" name="debt" placeholder="Monthly Debt Payments (Excl. Mortgage)">
+    	      <br>
+              <br>
+            	  <input type="number" class="form-control" id="fico" name="fico" placeholder="Fico Score">
+    	      <br>
+              <br>
+          	 <input type="number" class="form-control" id="emp" name="emp" placeholder="Length of Employment in Years">
+        </div>
+        <br>													   
+        <center>
+          <button type="submit" class="btn btn-success" style="background:tomato; border:tomato; height:50px; width:100px">
+              <font size = "4">Submit</font>
+          </button>
+        </center>
+      </form>
+
+    
+    <div>
+        <br>
+    </div>
+    
+    <div>
+        <br>
+    </div>
+    
+  </body>
+</html>
